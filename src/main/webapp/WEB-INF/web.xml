@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee     http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+  <display-name>Tomcat Embedded Test</display-name>
+  <servlet>
+    <servlet-name>fooServlet</servlet-name>
+    <servlet-class>com.example.servlets.FooServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet>
+    <servlet-name>barServlet</servlet-name>
+    <servlet-class>com.example.servlets.BarServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>fooServlet</servlet-name>
+    <url-pattern>/foo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>barServlet</servlet-name>
+    <url-pattern>/bar</url-pattern>
+  </servlet-mapping>
+
+  <filter>
+    <filter-name>RequestLoggerFilter</filter-name>
+    <filter-class>com.example.filters.RequestLoggerFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>RequestLoggerFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+    <dispatcher>REQUEST</dispatcher>
+  </filter-mapping>
+
+</web-app>
