@@ -12,14 +12,14 @@ java -jar ./target/TomcatEmbeddedTest-1.0-SNAPSHOT.jar
 - Open the browser and search the following:
 ```
 # servlets defined into the web.xml file
-http://localghost:8080/foo
-http://localghost:8080/bar
+http://localhost:8080/foo
+http://localhost:8080/bar
 
 # servlet defined with annotation
-http://localghost:8080/annotated
+http://localhost:8080/annotated
 
 # check the filter correctly works
-http://localghost:8080/bar?block
+http://localhost:8080/bar?block
 
 # check the public jsp is visible
 http://localhost:8080/login.jsp
