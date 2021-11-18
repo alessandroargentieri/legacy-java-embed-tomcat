@@ -44,6 +44,8 @@ public class Main {
         // con addWebApp recupera correttamente il web.xml
         //Context ctx = tomcat.addWebapp(tomcat.getHost(), "/", "src/main/webapp", cc);
         Context ctx = tomcat.addWebapp(tomcat.getHost(), "/", "src/main/webapp");
+        // IMPORTANT: if you want to pass another custom web.xml (and not the one in the default folder src/main/webapp/WEB-INF/web.xml)
+        //ctx.getServletContext().setAttribute(Globals.ALT_DD_ATTR, "src/main/webapp/WEB-INF/alternative-web.xml");
         return ctx;
     }
 
